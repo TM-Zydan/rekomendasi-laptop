@@ -96,6 +96,34 @@
         .nav-links a:hover::after {
             width: 100%;
         }
+
+        /* --- RESPONSIVE DESIGN --- */
+@media (max-width: 1024px) {
+    .projects-grid-5 {
+        grid-template-columns: repeat(3, 1fr); /* Tablet: 3 Kolom */
+    }
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column; /* Hero jadi atas-bawah */
+        text-align: center;
+        padding-top: 50px;
+    }
+    .main-title { font-size: 35px; }
+    .projects-grid-5 {
+        grid-template-columns: repeat(2, 1fr); /* HP: 2 Kolom */
+        gap: 15px;
+    }
+    .detail-header { margin-bottom: 30px; }
+}
+
+@media (max-width: 480px) {
+    .projects-grid-5 {
+        grid-template-columns: 1fr; /* HP Kecil: 1 Kolom saja */
+    }
+    .detail-title { font-size: 30px; }
+}
     </style>
 </head>
 <body>
