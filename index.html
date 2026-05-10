@@ -104,18 +104,40 @@
     }
 }
 
+/* --- HANYA PERBAIKAN JUDUL & SUBTITLE UNTUK HP --- */
 @media (max-width: 768px) {
     .main-content {
-        flex-direction: column; /* Hero jadi atas-bawah */
+        flex-direction: column;
         text-align: center;
-        padding-top: 50px;
+        padding-top: 60px; /* Memberi ruang agar judul tidak tertutup menu */
     }
-    .main-title { font-size: 35px; }
-    .projects-grid-5 {
-        grid-template-columns: repeat(2, 1fr); /* HP: 2 Kolom */
-        gap: 15px;
+
+    .main-title {
+        font-size: 24px !important; /* Ukuran pas untuk layar HP agar tidak bertumpuk */
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        line-height: 1.2;
+        margin-bottom: 15px;
     }
-    .detail-header { margin-bottom: 30px; }
+
+    .main-title span {
+        display: block;
+        width: 100%;
+    }
+
+    /* Perbaikan tulisan putih di bawah judul */
+    .subtitle {
+        font-size: 14px !important;
+        max-width: 90%;
+        margin: 0 auto;
+        line-height: 1.5;
+    }
+
+    .description-box {
+        justify-content: center;
+        margin-top: 10px;
+    }
 }
 
 @media (max-width: 480px) {
