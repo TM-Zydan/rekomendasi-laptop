@@ -105,33 +105,25 @@
 }
 
 @media (max-width: 768px) {
-    /* --- PERBAIKAN KHUSUS JUDUL --- */
-    .main-title { 
-        font-size: 26px !important; /* Perkecil ukuran agar tidak tabrakan */
-        display: flex;
-        flex-direction: column; /* Paksa teks berbaris ke bawah */
-        gap: 5px;
-        line-height: 1.2;
-    }
-
-    .main-title span {
-        display: block; /* Pastikan teks hitam dan putih punya baris sendiri */
-        width: 100%;
-    }
-
     .main-content {
-        flex-direction: column; 
+        flex-direction: column; /* Hero jadi atas-bawah */
         text-align: center;
-        padding-top: 40px; /* Tambah jarak agar tidak nabrak menu */
+        padding-top: 50px;
     }
-    
-    /* --- BAGIAN LAPTOP TETAP (TIDAK BERUBAH) --- */
+    .main-title { font-size: 35px; }
     .projects-grid-5 {
-        grid-template-columns: repeat(2, 1fr); 
+        grid-template-columns: repeat(2, 1fr); /* HP: 2 Kolom */
         gap: 15px;
     }
     .detail-header { margin-bottom: 30px; }
 }
+
+@media (max-width: 480px) {
+    .projects-grid-5 {
+        grid-template-columns: 1fr; /* HP Kecil: 1 Kolom saja */
+    }
+    .detail-title { font-size: 30px; }
+        }
     </style>
 </head>
 <body>
