@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rekomendasi Laptop Kuliah</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* --- ANIMASI BARU --- */
+        @keyframes revealUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInHeader {
+            from { opacity: 0; transform: translateX(-20px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        /* Animasi Hero Section */
+        .main-title {
+            animation: revealUp 1s ease-out both;
+        }
+        .description-box {
+            animation: revealUp 1s ease-out both 0.3s;
+        }
+        .image-area img {
+            animation: fadeInHeader 1.2s ease-out both 0.5s;
+            transition: transform 0.5s ease;
+        }
+        .image-area img:hover {
+            transform: translateY(-10px) rotate(2deg);
+        }
+
+        /* Animasi Grid & Card */
+        .category-wrapper {
+            animation: revealUp 1s ease-out both;
+            /* Menggunakan view-timeline agar muncul saat discroll */
+            view-timeline-name: --section;
+            view-timeline-axis: block;
+            animation-timeline: --section;
+            animation-range: entry 10% cover 30%;
+        }
+
+        .project-card {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .project-card:hover {
+            transform: scale(1.05);
+            z-index: 2;
+            box-shadow: 0 15px 35px rgba(168, 28, 28, 0.4);
+        }
+
+        /* Staggered Delay untuk kartu (Muncul satu-satu) */
+        .project-card:nth-child(1) { animation-delay: 0.1s; }
+        .project-card:nth-child(2) { animation-delay: 0.2s; }
+        .project-card:nth-child(3) { animation-delay: 0.3s; }
+        .project-card:nth-child(4) { animation-delay: 0.4s; }
+        .project-card:nth-child(5) { animation-delay: 0.5s; }
+
+        .card-overlay {
+            transition: 0.3s ease;
+            background: linear-gradient(transparent, rgba(168, 28, 28, 0.9));
+        }
+
+        .project-card:hover .card-overlay {
+            padding-bottom: 20px;
+        }
+
+        /* Styling Navigasi */
+        .nav-links a {
+            position: relative;
+            transition: 0.3s;
+        }
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: #a81c1c;
+            transition: 0.3s;
+        }
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="main-nav">
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="profil.html">Profil</a>
+            <a href="#projects">Blog</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="main-content">
+            <div class="text-container">
+                <h1 class="main-title">
+                    <span class="text-black">REKOMENDASI 10 LAPTOP</span>
+                    <span class="text-white">ANAK KULIAH</span>
+                </h1>
+                <div class="description-box">
+                    <div class="line-decorator"></div>
+                    <p class="subtitle">Pilihan terbaik untuk produktivitas & kreativitas mahasiswa di tahun 2026.</p>
+                </div>
+            </div>
+            <div class="image-area">
+                <img src="laptop back.png" alt="Laptop Preview">
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects-section">
+        
+        <div class="category-wrapper">
+            <div class="projects-header">
+                <div class="header-left">
+                    <p class="red-tag">LOW PERFORMANCE</p>
+                    <h2>LAPTOP WORKSTATION</h2>
+                </div>
+            </div>
+
+            <div class="projects-grid-5">
+                <a href="detail-lenovo.html" class="project-card">
+                    <img src="laptop.webp" alt="">
+                    <div class="card-overlay"><p>Lenovo IdeaPad Slim 3</p></div>
+                </a>
+                <a href="detail-acer.html" class="project-card">
+                    <img src="Acer-aspire-5-slim.webp" alt="">
+                    <div class="card-overlay"><p>Acer Aspire 3 Slim A314</p></div>
+                </a>
+                <a href="detail-asus.html" class="project-card">
+                    <img src="vivobook 14.jpg" alt="">
+                    <div class="card-overlay"><p>ASUS Vivobook 14 A1404</p></div>
+                </a>
+                <a href="detail-axioo.html" class="project-card">
+                    <img src="axioo hype  5.jpg" alt="">
+                    <div class="card-overlay"><p>AXIOO Hype 5 AMD</p></div>
+                </a>
+                <a href="detail-hp.html" class="project-card">
+                    <img src="HP 14s.jpg" alt="">
+                    <div class="card-overlay"><p>HP 14S DQ0508TU</p></div>
+                </a>
+            </div>
+        </div>
+
+        <div class="category-wrapper" style="margin-top: 80px;">
+            <div class="projects-header">
+                <div class="header-left">
+                    <p class="red-tag">HIGH PERFORMANCE</p>
+                    <h2>LAPTOP GAMING</h2>
+                </div>
+            </div>
+
+            <div class="projects-grid-5">
+                <a href="detail-victus.html" class="project-card">
+                    <img src="HP victus 15.webp" alt="">
+                    <div class="card-overlay"><p>HP Victus 15 RTX 2050</p></div>
+                </a>
+                <a href="detail-pongo.html" class="project-card">
+                    <img src="axioo 775.jpg" alt="">
+                    <div class="card-overlay"><p>AXIOO Pongo 775</p></div>
+                </a>
+                <a href="detail-loq.html" class="project-card">
+                    <img src="LOQ 15.png" alt="">
+                    <div class="card-overlay"><p>Lenovo LOQ 15</p></div>
+                </a>
+                <a href="detail-tuf.html" class="project-card">
+                    <img src="TUF a15.jpg" alt="">
+                    <div class="card-overlay"><p>ASUS TUF A15</p></div>
+                </a>
+                <a href="detail-nitro.html" class="project-card">
+                    <img src="Nitro V15.webp" alt="">
+                    <div class="card-overlay"><p>Acer Nitro V15</p></div>
+                </a>
+            </div>
+        </div>
+
+    </section>
+
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Laptop - Blog</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;900&display=swap" rel="stylesheet">
+    <style>
+        /* --- ANIMASI TAMBAHAN (HANYA MENAMBAH) --- */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes imageIn {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .detail-body {
+            background-color: #000;
+            padding: 100px 8%;
+            min-height: 100vh;
+        }
+        .detail-header {
+            margin-bottom: 50px;
+            /* Panggil Animasi */
+            animation: fadeInUp 0.8s ease-out both;
+        }
+        .detail-title {
+            font-size: 60px;
+            font-weight: 900;
+            text-transform: uppercase;
+            line-height: 1;
+            margin-bottom: 20px;
+        }
+        .highlight-red { color: #a81c1c; }
+        
+        .detail-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: start;
+        }
+        .detail-text {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #ccc;
+            /* Panggil Animasi dengan delay */
+            animation: fadeInUp 0.8s ease-out both 0.3s;
+        }
+        .detail-image {
+            /* Panggil Animasi untuk Gambar */
+            animation: imageIn 1s ease-out both 0.5s;
+        }
+        .detail-image img {
+            width: 100%;
+            border-radius: 20px;
+            filter: drop-shadow(0 0 30px rgba(168, 28, 28, 0.3));
+            /* Tambahan transisi hover agar halus */
+            transition: transform 0.5s ease;
+        }
+        .detail-image img:hover {
+            transform: scale(1.02);
+        }
+        .back-btn {
+            display: inline-block;
+            margin-top: 40px;
+            color: #fff;
+            text-decoration: none;
+            border-bottom: 1px solid #fff;
+            padding-bottom: 5px;
+            font-weight: 900;
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+        .back-btn:hover {
+            color: #a81c1c;
+            border-color: #a81c1c;
+        }
+
+        /* Tambahkan ini di bagian paling bawah tag <style> */
+@media (max-width: 768px) {
+    .detail-body {
+        padding: 50px 5%; /* Mengurangi padding agar ruang lebih luas */
+    }
+
+    .detail-container {
+        display: flex; /* Mengubah grid menjadi flex */
+        flex-direction: column; /* Menyusun elemen ke bawah (Atas-Bawah) */
+        gap: 20px;
+    }
+
+    .detail-text {
+        order: 2; /* Menempatkan teks di bawah gambar */
+        font-size: 16px;
+        text-align: left;
+    }
+
+    .detail-image {
+        order: 1; /* Menempatkan gambar di atas teks */
+        width: 100%;
+    }
+
+    .detail-title {
+        font-size: 32px; /* Mengecilkan ukuran judul agar tidak terpotong */
+        text-align: left;
+    }
+}
+    </style>
+</head>
+<body class="detail-body">
+
+    <div class="detail-header">
+        <h1 class="detail-title">
+            Lenovo LOQ 15 RTX 2050 <br>
+            <span class="highlight-red">Laptop Stylish dan Kencang untuk Mahasiswa Teknik</span>
+        </h1>
+    </div>
+
+    <div class="detail-container">
+        <div class="detail-text">
+            <p>Bagi mahasiswa teknik, laptop dengan performa tinggi sangat penting untuk mendukung aktivitas kuliah seperti coding, editing, rendering, hingga multitasking. Laptop Lenovo LOQ 15 Essential RTX 2050 i5-12450HX 12GB 512S hadir dengan desain minimalis modern dan performa yang cocok untuk kebutuhan produktivitas sehari-hari.</p>
+            <P>.</P>
+            <p>.</p>
+            <p>Dengan kombinasi Intel Core i5 HX, RTX 2050, dan layar 144Hz, Laptop Lenovo LOQ 15 Essential RTX 2050 i5-12450HX 12GB 512S menjadi salah satu pilihan menarik untuk mahasiswa teknik yang membutuhkan laptop kencang dengan desain modern dan profesional.</p>
+            <br>
+            <p><strong>Spesifikasi Utama:</strong></p>
+            <ul style="padding-left: 20px;">
+                <li>Processor: Intel Core i5-12450HX</li>
+                <li>VGA: NVIDIA GeForce RTX 2050 4GB</li>
+                <li>RAM: 12GB DDR5</li>
+                <li>Storage: SSD NVMe 512GB</li>
+                <li>Layar: 15.6 inci Full HD IPS 144Hz</li>
+                <li>Warna: Luna Grey / Silver Grey</li>
+                <li>Keyboard: RGB Backlit Keyboard</li>
+                <li>Sistem Pendingin: Dual Fan Cooling</li>
+            </ul>
+            <br>
+            <p>Siap dipakai kuliah, project, sampai gaming.</p>
+            
+            <a href="index.html#projects" class="back-btn">← Back to Blog</a>
+        </div>
+
+        <div class="detail-image">
+            <img src="LOQ 15.png" alt="Detail Laptop">
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Laptop - Blog</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;900&display=swap" rel="stylesheet">
+    <style>
+        /* --- ANIMASI TAMBAHAN --- */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .detail-body {
+            background-color: #000;
+            padding: 100px 8%;
+            min-height: 100vh;
+        }
+        .detail-header {
+            margin-bottom: 50px;
+            /* Penerapan Animasi Header */
+            animation: fadeInUp 0.8s ease-out both;
+        }
+        .detail-title {
+            font-size: 60px;
+            font-weight: 900;
+            text-transform: uppercase;
+            line-height: 1;
+            margin-bottom: 20px;
+        }
+        .highlight-red { color: #a81c1c; }
+        
+        .detail-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: start;
+        }
+        .detail-text {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #ccc;
+            /* Penerapan Animasi Teks dengan Delay */
+            animation: fadeInUp 0.8s ease-out both 0.3s;
+        }
+        .detail-image {
+            /* Penerapan Animasi Gambar */
+            animation: fadeInScale 1s ease-out both 0.5s;
+        }
+        .detail-image img {
+            width: 100%;
+            border-radius: 20px;
+            filter: drop-shadow(0 0 30px rgba(168, 28, 28, 0.3));
+            /* Transisi untuk interaksi halus */
+            transition: transform 0.5s ease;
+        }
+        /* Efek Hover Gambar */
+        .detail-image img:hover {
+            transform: scale(1.02);
+        }
+        .back-btn {
+            display: inline-block;
+            margin-top: 40px;
+            color: #fff;
+            text-decoration: none;
+            border-bottom: 1px solid #fff;
+            padding-bottom: 5px;
+            font-weight: 900;
+            text-transform: uppercase;
+            transition: 0.3s ease;
+        }
+        /* Efek Hover Tombol */
+        .back-btn:hover {
+            color: #a81c1c;
+            border-color: #a81c1c;
+            transform: translateX(-5px);
+        }
+
+        /* Tambahkan ini di bagian paling bawah tag <style> */
+@media (max-width: 768px) {
+    .detail-body {
+        padding: 50px 5%; /* Mengurangi padding agar ruang lebih luas */
+    }
+
+    .detail-container {
+        display: flex; /* Mengubah grid menjadi flex */
+        flex-direction: column; /* Menyusun elemen ke bawah (Atas-Bawah) */
+        gap: 20px;
+    }
+
+    .detail-text {
+        order: 2; /* Menempatkan teks di bawah gambar */
+        font-size: 16px;
+        text-align: left;
+    }
+
+    .detail-image {
+        order: 1; /* Menempatkan gambar di atas teks */
+        width: 100%;
+    }
+
+    .detail-title {
+        font-size: 32px; /* Mengecilkan ukuran judul agar tidak terpotong */
+        text-align: left;
+    }
+}
+    </style>
+</head>
+<body class="detail-body">
+
+    <div class="detail-header">
+        <h1 class="detail-title">
+            ASUS <br>
+            <span class="highlight-red">Vivobook 14 A1404</span>
+        </h1>
+    </div>
+
+    <div class="detail-container">
+        <div class="detail-text">
+            <p>Kalau kamu mencari laptop dengan performa yang gesit dan mudah dibawa ASUS Vivobook 14 A1404 bisa jadi pilihan. Kombinasi prosesor Intel® Core™ i5-1335U dan RAM 8 GB super luas membuat laptop ini punya performa ciamik yang bisa kamu andalkan untuk mengerjakan aneka jenis tugas kuliah.
+            <br><br>
+            Mengisi daya baterai tak lagi lama berkat fitur fast charging yang dapat mengisi baterai hingga 60% hanya dalam 49 menit. Meski dibekali prosesor yang tangguh, laptop ini punya model slim yang ringan untuk memudahkan kamu membawanya untuk nugas di kampus atau cafe.</p>
+            <br>
+            <p><strong>Spesifikasi Utama:</strong></p>
+            <ul style="padding-left: 20px;">
+                <li>Layar: 14 Inch, IPS, FHD (1920 x 1080p), 250 nits, sRGB</li>
+                <li>Prosesor: Intel® Core™ i5-1335U 1.3 GHz (12MB Cache, hingga 4.6 GHz, 10 cores, 12 Threads)</li>
+                <li>Kartu grafis: Intel UHD Graphics</li>
+                <li>RAM: 8 GB DDR4 Solder</li>
+                <li>Penyimpanan: 512 GB M.2 NVMe PCIe® 4.0 SSD</li>
+                <li>Sistem Operasi: Windows 11 Home</li>
+                <li>Audio: SonicMaster</li>
+                <li>Baterai: 42WHrs, 3S1P, 3-cell Li-ion</li>
+            </ul>
+            <br>
+            <p>Cocok untuk pengerjaan tugas dokumen, browsing berat, hingga editing foto ringan untuk keperluan organisasi kampus.</p>
+            
+            <a href="index.html#projects" class="back-btn">← Back to Blog</a>
+        </div>
+
+        <div class="detail-image">
+            <img src="vivobook 14.jpg" alt="Detail Laptop">
+        </div>
+    </div>
+
+</body>
+</html>

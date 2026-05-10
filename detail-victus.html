@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Laptop - Blog</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;900&display=swap" rel="stylesheet">
+    <style>
+        /* --- ANIMASI KEYFRAMES --- */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes imageIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9) translateX(20px);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1) translateX(0);
+            }
+        }
+
+        /* --- STYLING DASAR --- */
+        .detail-body {
+            background-color: #000;
+            padding: 100px 8%;
+            min-height: 100vh;
+            color: #fff;
+            overflow-x: hidden;
+        }
+        
+        .detail-header {
+            margin-bottom: 50px;
+            /* Penerapan Animasi pada Header */
+            animation: fadeInUp 0.8s ease-out both;
+        }
+
+        .detail-title {
+            font-size: 60px;
+            font-weight: 900;
+            text-transform: uppercase;
+            line-height: 1;
+            margin-bottom: 20px;
+        }
+
+        .highlight-red { color: #a81c1c; }
+        
+        .detail-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: start;
+        }
+
+        .detail-text {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #ccc;
+            /* Penerapan Animasi pada Teks (dengan delay agar muncul setelah header) */
+            animation: fadeInUp 0.8s ease-out both 0.3s;
+        }
+
+        .detail-image {
+            /* Penerapan Animasi pada Gambar */
+            animation: imageIn 1s cubic-bezier(0.165, 0.84, 0.44, 1) both 0.5s;
+        }
+
+        .detail-image img {
+            width: 100%;
+            border-radius: 20px;
+            filter: drop-shadow(0 0 30px rgba(168, 28, 28, 0.3));
+            transition: transform 0.5s ease;
+        }
+
+        /* Efek Hover Tambahan pada Gambar */
+        .detail-image img:hover {
+            transform: scale(1.03);
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-top: 40px;
+            color: #fff;
+            text-decoration: none;
+            border-bottom: 1px solid #fff;
+            padding-bottom: 5px;
+            font-weight: 900;
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            color: #a81c1c;
+            border-color: #a81c1c;
+            transform: translateX(-5px);
+        }
+
+        /* Responsif untuk layar kecil */
+        @media (max-width: 992px) {
+            .detail-container { grid-template-columns: 1fr; }
+            .detail-title { font-size: 40px; }
+            .detail-image { order: -1; margin-bottom: 30px; }
+        }
+    </style>
+</head>
+<body class="detail-body">
+
+    <div class="detail-header">
+        <h1 class="detail-title">
+            HP Victus 15 RTX 2050 <br>
+            <span class="highlight-red">Laptop Kencang untuk Mahasiswa Teknik</span>
+        </h1>
+    </div>
+
+    <div class="detail-container">
+        <div class="detail-text">
+            <p>Buat mahasiswa teknik, memilih laptop bukan cuma soal desain, tapi juga performa. Mulai dari coding, menjalankan software berat, editing, sampai multitasking tugas kuliah membutuhkan laptop yang stabil dan powerful. Salah satu pilihan yang menarik adalah HP Victus 15 RTX 2050 yang hadir dengan performa tinggi namun tetap nyaman digunakan untuk aktivitas sehari-hari.</p>
+            <p>.</p>
+            <P>.</P>
+            <p>Dengan kombinasi performa RTX 2050, SSD cepat, dan desain modern, HP Victus 15 RTX 2050 menjadi pilihan menarik untuk mahasiswa teknik yang membutuhkan laptop kuat untuk berbagai aktivitas perkuliahan maupun hiburan.</p>
+        
+            <br>
+            <p><strong>Spesifikasi Utama:</strong></p>
+            <ul style="padding-left: 20px; margin-top: 10px;">
+                <li>Processor: Intel Core i5 / AMD Ryzen Series</li>
+                <li>VGA: NVIDIA GeForce RTX 2050 4GB</li>
+                <li>RAM: 8GB–16GB DDR4</li>
+                <li>Storage: SSD NVMe 512GB</li>
+                <li>Layar: 15.6 inci Full HD 144Hz</li>
+                <li>Sistem Pendingin: Dual Fan Cooling</li>
+                <li>Keyboard: Full-size backlit keyboard</li>
+                <li>Baterai: Fast charging support</li>
+            </ul>
+            <br>
+            <p>Ngoding dan Desain lancar tanpa takut laptop ngelag.</p>
+            
+            <a href="index.html#projects" class="back-btn">← Back to Blog</a>
+        </div>
+
+        <div class="detail-image">
+            <img src="HP victus 15.webp" alt="Detail Laptop">
+        </div>
+    </div>
+
+</body>
+</html>

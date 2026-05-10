@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil - Rekomendasi Laptop Kuliah</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: #a81c1c;
+            color: #ffffff;
+            /* PERUBAHAN: min-height dan overflow agar bisa di-scroll */
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow-y: auto; 
+            padding: 50px 0;
+        }
+
+        /* --- ANIMASI --- */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .page-container {
+            width: 100%;
+            max-width: 1280px;
+            /* PERUBAHAN: Tinggi otomatis agar mengikuti konten */
+            height: auto; 
+            position: relative;
+            padding: 40px 8%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* --- NAVIGASI --- */
+        .main-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 60px;
+            z-index: 10;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .logo { font-weight: 900; font-size: 24px; text-transform: uppercase; }
+
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            margin-left: 35px;
+            font-size: 14px;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        .nav-links .active { color: #000000; }
+
+        /* --- LAYOUT KONTEN --- */
+        .content-area {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 50px;
+            flex-grow: 1;
+            align-items: center;
+        }
+
+        .profile-info h1 {
+            font-size: 64px;
+            font-weight: 900;
+            line-height: 1.1;
+            text-transform: uppercase;
+            margin-bottom: 25px;
+            animation: fadeInUp 0.8s ease both 0.4s;
+        }
+
+        .profile-info p.bio {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 40px;
+            max-width: 520px;
+            animation: fadeInUp 0.8s ease both 0.6s;
+        }
+
+        /* --- SOSMED --- */
+        .contact-items {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            animation: fadeInUp 0.8s ease both 0.8s;
+        }
+
+        .contact-box {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .icon-circle {
+            width: 40px; height: 40px;
+            background: #000;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* --- BAGIAN FOTO (LINGKARAN MERAH & BG HITAM) --- */
+        .image-area {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #my-profile-frame {
+            width: 320px !important;
+            height: 320px !important;
+            border-radius: 50% !important;
+            overflow: hidden !important;
+            /* Bingkai Merah Terang */
+            border: 8px solid #000000 !important; 
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+            /* Background Dalam Hitam */
+            background-color: #000000 !important; 
+        }
+
+        #my-profile-frame img {
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: cover !important;
+            display: block;
+        }
+
+        /* Responsif untuk HP agar scroll enak dilihat */
+        @media (max-width: 768px) {
+            .content-area {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .image-area { order: -1; margin-bottom: 30px; }
+            .contact-items { align-items: center; }
+            .profile-info h1 { font-size: 40px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-container">
+        <header class="main-nav">
+            <div class="logo">INPOKAN SPOT MANCING</div>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="profil.html" class="active">Profil</a>
+                <a href="index.html#projects">Blog</a>
+            </nav>
+        </header>
+
+        <main class="content-area">
+            <div class="profile-info">
+                <h3></h3>
+                <h1>HALO! PERKENALKAN<br> SAYA ZIDAN.</h1>
+                <p class="bio">Saya adalah mahasiswa yang tertarik pada bidang teknologi, khususnya perkembangan perangkat digital dan dunia komputer. 
+                Melalui blog ini, saya membagikan beberapa rekomendasi laptop terbaik yang cocok untuk kebutuhan kuliah, produktivitas, hingga kreativitas digital mahasiswa.</p>
+                
+                <div class="contact-items">
+                    <a href="https://www.facebook.com/share/1DMd1aa4Cn/" class="contact-box">
+                        <div class="icon-circle"><i class="fa-brands fa-facebook-f"></i></div>
+                        <div class="contact-text"><strong>facebook</strong></div>
+                    </a>
+                    
+                    <a href="https://www.instagram.com/ziydnne?igsh=Nmw5MHRuZHJlZW9v" target="_blank" class="contact-box">
+                        <div class="icon-circle"><i class="fa-brands fa-instagram"></i></div>
+                        <div class="contact-text"><strong>instagram</strong></div>
+                    </a>
+
+                    <a href="mailto:zeinamier01@gmail.com" class="contact-box">
+                        <div class="icon-circle"><i class="fa-solid fa-envelope"></i></div>
+                        <div class="contact-text"><strong>Email</strong></div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="image-area">
+                <div id="my-profile-frame">
+                    <img src="zidane.png" alt="Foto Profil">
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>
