@@ -104,59 +104,53 @@
     }
 }
 
-/* --- FIX JUDUL & SUBTITLE HP --- */
 @media (max-width: 768px) {
-    .hero {
-        padding-top: 100px !important; /* Turunin posisi agar tidak tertutup Menu Navigasi */
-        height: auto !important;
-        min-height: 80vh;
-    }
-
+    /* Container utama dibuat urut dari atas ke bawah */
     .main-content {
+        display: flex !important;
         flex-direction: column !important;
-        justify-content: flex-start !important;
         align-items: center !important;
         text-align: center !important;
+        padding-top: 80px !important; /* Jarak agar di bawah menu navigasi */
     }
 
+    /* 1. Judul & Subtitle berada di urutan pertama (di atas gambar) */
     .text-container {
+        order: 1 !important; 
         width: 100% !important;
-        order: 1; /* Paksa teks muncul paling atas */
-        z-index: 10;
+        margin-bottom: 20px !important;
     }
 
     .main-title {
-        font-size: 22px !important; /* Ukuran font dikecilkan agar teks tidak bertumpuk */
-        display: block !important; /* Hilangkan flex agar tidak maksa sejajar */
-        margin: 0 auto 15px auto !important;
-        width: 100% !important;
+        font-size: 24px !important;
         line-height: 1.2 !important;
-    }
-
-    .main-title span {
-        display: block !important; /* Paksa teks 'Rekomendasi' dan 'Anak Kuliah' beda baris */
-        width: 100% !important;
-        position: static !important;
-    }
-
-    .subtitle {
-        font-size: 14px !important; /* Kecilkan teks putih biar manis di HP */
-        padding: 0 20px !important;
-        line-height: 1.4 !important;
+        margin: 0 auto 10px auto !important;
         display: block !important;
     }
 
+    .main-title span {
+        display: block !important; /* Teks hitam dan putih berbaris rapi */
+    }
+
+    .subtitle {
+        font-size: 14px !important;
+        padding: 0 15px !important;
+        max-width: 320px;
+        margin: 0 auto !important;
+    }
+
+    /* 2. Gambar Laptop berada di urutan kedua (di bawah judul) */
     .image-area {
-        order: 2; /* Gambar laptop pindah ke bawah teks */
+        order: 2 !important;
         width: 100% !important;
-        margin-top: 30px !important;
+        margin-top: 20px !important;
     }
 
     .image-area img {
-        width: 90% !important;
-        max-width: 300px !important;
+        width: 85% !important;
+        max-width: 350px !important;
+        height: auto !important;
     }
-}
 
 @media (max-width: 480px) {
     .projects-grid-5 {
